@@ -1,0 +1,34 @@
+/*
+component: container
+classes: 
+  .container | .wrapper
+  → .fill-height
+  → .fill-width
+  → .fill-space (width & height)
+*/
+
+@use '../core/variables';
+
+.container,
+.wrapper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: variables.$container__padding;
+  max-width: variables.$container__max-width;
+
+  &.fill-height {
+    height: 100%;
+  }
+
+  &.fill-width {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  &.fill-space {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+}
