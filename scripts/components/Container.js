@@ -1,42 +1,19 @@
-import { Cluster, html } from "./Cluster";
-import { classMap } from "lit-html/directives/class-map";
-import container from "../../styles/components/container.scss";
+import { Cluster, html, classMap } from "./Cluster";
+import config from "../configs/container.config";
 
 class Container extends Cluster {
   static get styles() {
     this.classes;
-    return [super.styles, container];
+    return [super.styles, config.styles];
   }
 
   static get properties() {
-    return {
-      fillHeight: {
-        attribute: "fill-height",
-        reflect: true,
-        type: Boolean,
-      },
-      fillWidth: {
-        attribute: "fill-width",
-        reflect: true,
-        type: Boolean,
-      },
-      fillSpace: {
-        attribute: "fill-space",
-        reflect: true,
-        type: Boolean,
-      },
-    };
+    return { ...config.properties() };
   }
 
   render() {
     return html`
-      <div
-        class="container tertiary ${classMap({
-          "fill-height": this.fillHeight,
-          "fill-width": this.fillWidth,
-          "fill-space": this.fillSpace,
-        })}"
-      >
+      <div class="container ${classMap({ ...config.classes.call(this), ...this.classes })}">
         <slot></slot>
       </div>
     `;
