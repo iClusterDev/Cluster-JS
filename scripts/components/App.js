@@ -4,6 +4,7 @@ class App extends Cluster {
   static get styles() {
     return [super.styles];
   }
+
   render() {
     return html`<slot></slot>`;
   }

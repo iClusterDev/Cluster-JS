@@ -1,9 +1,6 @@
 import { Cluster, html } from "./Cluster";
-import Mapper from "../tools/Mapper";
 import { classMap } from "lit-html/directives/class-map";
 import container from "../../styles/components/container.scss";
-
-const mapper = new Mapper(["fill-height", "fill-width", "fill-space"]);
 
 class Container extends Cluster {
   static get styles() {
@@ -12,16 +9,34 @@ class Container extends Cluster {
   }
 
   static get properties() {
-    return { ...this.classesToProperties(["fill-height", "fill-width", "fill-space"]) };
-  }
-
-  static get classes() {
-    console.log(this.properties);
+    return {
+      fillHeight: {
+        attribute: "fill-height",
+        reflect: true,
+        type: Boolean,
+      },
+      fillWidth: {
+        attribute: "fill-width",
+        reflect: true,
+        type: Boolean,
+      },
+      fillSpace: {
+        attribute: "fill-space",
+        reflect: true,
+        type: Boolean,
+      },
+    };
   }
 
   render() {
     return html`
-      <div class="container tertiary ${classMap({ ...mapper.classMap(this) })}">
+      <div
+        class="container tertiary ${classMap({
+          "fill-height": this.fillHeight,
+          "fill-width": this.fillWidth,
+          "fill-space": this.fillSpace,
+        })}"
+      >
         <slot></slot>
       </div>
     `;

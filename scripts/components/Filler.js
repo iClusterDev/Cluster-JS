@@ -5,6 +5,7 @@ class Filler extends Cluster {
   static get styles() {
     return [super.styles, filler];
   }
+
   render() {
     return html`
       <div class="filler">
