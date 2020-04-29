@@ -12,7 +12,7 @@ class Container extends Cluster {
 
   render() {
     return html`
-      <div class="container ${classMap({ ...config.classes.call(this), ...this.classes })}">
+      <div class="container primary ${classMap({ ...config.classes.call(this), ...this.classes })}">
         <slot></slot>
       </div>
     `;

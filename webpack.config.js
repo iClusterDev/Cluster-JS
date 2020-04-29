@@ -30,14 +30,7 @@ module.exports = {
       // },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "lit-scss-loader",
-          "extract-loader",
-          "style-loader",
-          "css-loader",
-          { loader: "sass-loader", options: { implementation: require("sass") } },
-          "resolve-url-loader",
-        ],
+        use: ["lit-scss-loader", "extract-loader", "css-loader", { loader: "sass-loader", options: { implementation: require("sass") } }, "resolve-url-loader"],
       },
       {
         test: /\.(eot|gif|otf|png|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
