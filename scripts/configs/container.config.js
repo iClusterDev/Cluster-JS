@@ -5,7 +5,7 @@ class Module {
     this.classList = Array.isArray(classList) && classList.length > 0 ? classList : [];
   }
 
-  propertyMap() {
+  properties() {
     const list = this.classList;
     return function () {
       return list.reduce((map, name) => {
@@ -19,7 +19,7 @@ class Module {
     };
   }
 
-  classMap() {
+  classes() {
     const list = this.classList;
     return function () {
       return list.reduce((map, name) => {
@@ -32,12 +32,12 @@ class Module {
 
 const module = new Module(["fill-height", "fill-height", "fill-space"]);
 
-// console.log(module.classMap.call(this))();
+// console.log(module.classes.call(this))();
 
 export default {
   styles: css,
-  classes: module.classMap(),
-  properties: module.propertyMap(),
+  classes: module.classes(),
+  properties: module.properties(),
   // classes: function () {
   //   return {
   //     "fill-height": this.fillHeight,
