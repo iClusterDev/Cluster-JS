@@ -1,9 +1,8 @@
 import { Cluster, html, classMap } from "./Cluster";
-import config from "../configs/container.config";
+import config from "../configs/container";
 
 class Container extends Cluster {
   static get styles() {
-    this.classes;
     return [super.styles, config.styles];
   }
 

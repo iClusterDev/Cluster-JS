@@ -1,7 +1,7 @@
 /*
 component: container
 classes: 
-  .container | .wrapper
+  .container
   → .fill-height
   → .fill-width
   → .fill-space (width & height)
@@ -9,8 +9,7 @@ classes:
 
 @use '../core/variables';
 
-.container,
-.wrapper {
+.container {
   position: relative;
   display: block;
   margin: 0 auto;

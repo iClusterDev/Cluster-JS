@@ -33,7 +33,7 @@ module.exports = {
         use: [
           "lit-scss-loader",
           "extract-loader",
-          // "style-loader",
+          "style-loader",
           "css-loader",
           { loader: "sass-loader", options: { implementation: require("sass") } },
           "resolve-url-loader",

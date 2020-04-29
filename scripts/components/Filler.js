@@ -1,5 +1,5 @@
 import { Cluster, html, classMap } from "./Cluster";
-import config from "../configs/filler.config";
+import config from "../configs/filler";
 
 class Filler extends Cluster {
   static get styles() {
