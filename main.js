@@ -1,3 +1,4 @@
-import "./scripts/components/App";
-import "./scripts/components/Filler";
-import "./scripts/components/Container";
+import "./styles/cluster.scss";
+import "./styles/components/filler.scss";
+import "./styles/components/container.scss";
+import "./styles/components/link.scss";

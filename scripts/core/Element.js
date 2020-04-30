@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit-element";
-import { classMap } from "lit-html/directives/class-map";
+import { classMap, styleMap } from "lit-html/directives/class-map";
 import styles from "../../styles/cluster.scss";
 
 class Cluster extends LitElement {
@@ -16,4 +16,4 @@ class Cluster extends LitElement {
   }
 }
 
-export { Cluster, html, css, classMap };
+export { Cluster, html, css, classMap, styleMap };

@@ -1,8 +1,10 @@
 /*
 module: _globals.scss
 global rules
-dependencies: none
+dependencies: ./core/normailze
 */
+
+@import "../../node_modules/normalize-scss/sass/normalize";
 
 html {
   box-sizing: border-box;

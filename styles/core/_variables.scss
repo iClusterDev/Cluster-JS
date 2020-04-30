@@ -37,18 +37,18 @@ $warning-color: #ffeb3b !default;
 $error-color: #f44336 !default;
 
 /*
-links
-*/
-$link-color-default: #039be5 !default;
-$link-color-hover: lighten($link-color-default, 25) !default;
-$nav-link-color-default: $secondary-color !default;
-$nav-link-color-hover: $nav-link-color-default !default;
-
-/*
 icons
 */
 $icons-color: $text-color !default;
 $icons-size: 1.5rem !default;
+
+/*
+component: link
+*/
+$link__color-default: #039be5 !default;
+$link__color-hover: lighten($link__color-default, 25) !default;
+$navlink__color-default: $secondary-color !default;
+$navlink__color-hover: $navlink__color-default !default;
 
 /*
 component: container
