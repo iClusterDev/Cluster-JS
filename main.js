@@ -1,3 +1,3 @@
 import App from "./src/App";
 
-App.mount("c-app");
+App.mount();

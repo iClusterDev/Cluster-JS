@@ -7,12 +7,14 @@ class Container extends Component {
   }
 
   static get properties() {
-    return container.properties();
+    return { ...container.properties() };
   }
 
+  // FIXME
+  // add classmap to container
   render() {
-    this.html`
-      <div class="container">Hello container</div>
+    return this.html`
+      <div class="container ${this.classes({ "fill-height": true })}"><slot></slot></div>
     `;
   }
 }
