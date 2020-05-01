@@ -1,6 +1,11 @@
 export default class Module {
-  constructor(classList = []) {
+  constructor(css, classList = []) {
+    this.css = css;
     this.classList = Array.isArray(classList) && classList.length > 0 ? classList : [];
+  }
+
+  styles() {
+    return this.css;
   }
 
   properties() {

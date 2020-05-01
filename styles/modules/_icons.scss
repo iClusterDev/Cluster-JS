@@ -6,7 +6,7 @@ framework iconmoon
 @use '../core/variables';
 
 $-icomoon-font-family: "icomoon";
-$-icomoon-font-path: "./fonts";
+$-icomoon-font-path: "../fonts";
 
 $-icon-activity: "\e900";
 $-icon-airplay: "\e901";
