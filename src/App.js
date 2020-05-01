@@ -1,10 +1,7 @@
 import Component from "./core/Component";
+import Container from "./components/Container";
 
-class App extends Component {
-  // static get styles() {
-  //   return [super.styles];
-  // }
-
+export default class App extends Component {
   render() {
     return this.html`
       <div class="primary">
@@ -13,5 +10,3 @@ class App extends Component {
     `;
   }
 }
-
-customElements.define("c-app", App);

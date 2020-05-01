@@ -1,5 +1,5 @@
 import Module from "../core/Module";
-import css from "../../styles/components/container";
+import css from "../../styles/components/container.scss";
 
 const container = new Module(css, ["fill-height", "fill-width", "fill-space"]);
 
