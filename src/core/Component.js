@@ -13,6 +13,8 @@ class Component extends LitElement {
     super();
     this.css = css;
     this.html = html;
+    // FIXME
+    // allow the use of class on the component itself?
     this.classes = classMap;
   }
 

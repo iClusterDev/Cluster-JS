@@ -10,11 +10,10 @@ class Container extends Component {
     return { ...container.properties() };
   }
 
-  // FIXME
-  // add classmap to container
   render() {
+    console.log(this.classList);
     return this.html`
-      <div class="container ${this.classes({ "fill-height": true })}"><slot></slot></div>
+      <div class="container ${this.classes({ ...container.classes.call(this) })}"><slot></slot></div>
     `;
   }
 }
