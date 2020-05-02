@@ -3,18 +3,19 @@ import Container from "./components/Container";
 import Filler from "./components/Filler";
 import Link from "./components/Link";
 import NavLink from "./components/NavLink";
-// import Icon from "./components/Icon";
+import MaterialIcon from "./components/MaterialIcon";
 
 export default class App extends Component {
   static get components() {
-    return [Filler, Container, Link, NavLink];
+    return [Filler, Container, Link, NavLink, MaterialIcon];
   }
 
   render() {
     return this.html`
       <c-filler>
         <c-container>
-          <span class="icon-home"></span>
+          <div>...some content</div>
+          <c-material-icon name="home" class="text-primary"></c-material-icon>
         </c-container>
       </c-filler>
     `;
