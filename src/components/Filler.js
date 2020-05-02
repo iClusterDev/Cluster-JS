@@ -8,7 +8,7 @@ class Filler extends Component {
 
   render() {
     return this.html`
-      <div class="filler"><slot></slot></div>
+      <div class="filler ${this.classes()}"><slot></slot></div>
     `;
   }
 }
