@@ -23,7 +23,7 @@ class Link extends Component {
 
   render() {
     return this.html`
-      <a href="${this.href}" target="${this.target}" class="link ${this.classes()}">link</a>
+      <a href="${this.href}" target="${this.target}" class="link ${this.classes()}"><slot></slot></a>
     `;
   }
 }
