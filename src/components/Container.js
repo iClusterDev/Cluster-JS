@@ -11,11 +11,20 @@ class Container extends Component {
   }
 
   render() {
-    console.log(this.classList);
     return this.html`
-      <div class="container ${this.classes({ ...container.classes.call(this) })}"><slot></slot></div>
+      <div class="container ${this.classes()}"><slot></slot></div>
     `;
   }
+  // render() {
+  //   return this.html`
+  //     <div class="container ${this.classes({ ...this.userClasses })}"><slot></slot></div>
+  //   `;
+  // }
+  // render() {
+  //   return this.html`
+  //     <div class="container ${this.classes({ ...container.classes.call(this) })}"><slot></slot></div>
+  //   `;
+  // }
 }
 
 export default Container;

@@ -15,7 +15,21 @@ class Component extends LitElement {
     this.html = html;
     // FIXME
     // allow the use of class on the component itself?
-    this.classes = classMap;
+    // this.classes = classMap;
+
+    // this.userClasses = Array.from(this.classList).reduce((classMap, className) => {
+    //   classMap[className] = true;
+    //   return classMap;
+    // }, {});
+
+    this.classes = function () {
+      return classMap({
+        ...Array.from(this.classList).reduce((classMap, className) => {
+          classMap[className] = true;
+          return classMap;
+        }, {}),
+      });
+    };
   }
 
   static get styles() {

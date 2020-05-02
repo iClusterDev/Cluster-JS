@@ -11,7 +11,7 @@ export default class App extends Component {
     return this.html`
       <div class="primary">
         <c-filler>
-          <c-container fill-height>
+          <c-container class="fill-height secondary">
             <div class="text-primary">some content...</div>
           </c-container>
         </c-filler>
