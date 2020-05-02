@@ -1,12 +1,12 @@
 /*
-module: _icons.scss
-framework iconmoon
+component: icon.scss
+from the framework iconmoon
 */
 
 @use '../core/variables';
 
 $-icomoon-font-family: "icomoon";
-$-icomoon-font-path: "../fonts";
+$-icomoon-font-path: "/fonts";
 
 $-icon-activity: "\e900";
 $-icon-airplay: "\e901";
@@ -306,7 +306,6 @@ $-icon-zoom-out: "\ea19";
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "#{$-icomoon-font-family}" !important;
-  // speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

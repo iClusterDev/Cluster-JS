@@ -3,6 +3,7 @@ import Container from "./components/Container";
 import Filler from "./components/Filler";
 import Link from "./components/Link";
 import NavLink from "./components/NavLink";
+// import Icon from "./components/Icon";
 
 export default class App extends Component {
   static get components() {
@@ -13,7 +14,7 @@ export default class App extends Component {
     return this.html`
       <c-filler>
         <c-container>
-          <div>some content with a <c-nav-link underline href="#">home</c-nav-link> ...</div>
+          <span class="icon-home"></span>
         </c-container>
       </c-filler>
     `;

@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -14,6 +15,7 @@ module.exports = {
     filename: "boundle.js",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./index.html",
     }),
@@ -27,6 +29,10 @@ module.exports = {
       // {
       //   test: /\.s[ac]ss$/i,
       //   use: ["style-loader", "css-loader", { loader: "sass-loader", options: { implementation: require("sass") } }, "resolve-url-loader"],
+      // },
+      // {
+      //   test: /\.s[ac]ss$/i,
+      //   use: ["lit-scss-loader", "extract-loader", "css-loader", { loader: "sass-loader", options: { implementation: require("sass") } }, "resolve-url-loader"],
       // },
       {
         test: /\.s[ac]ss$/i,
