@@ -14,8 +14,7 @@ export default class App extends Component {
     return this.html`
       <c-filler>
         <c-container>
-          <div>...some content</div>
-          <c-material-icon name="home" class="text-primary"></c-material-icon>
+          <h2>some content with a <a href="#" class="link">link</a></h2>
         </c-container>
       </c-filler>
     `;

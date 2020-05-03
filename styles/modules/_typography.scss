@@ -6,7 +6,8 @@ base typography rules and helpers
 @use '../core/variables';
 @use '../core/mixins';
 
-html {
+html,
+:host {
   font-size: variables.$text-mobile-size;
   font-family: variables.$font-primary-stack;
 }
