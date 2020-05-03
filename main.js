@@ -1,4 +1,4 @@
-import "./styles/cluster.scss";
-// import App from "./src/App";
+// import "./styles/cluster.scss";
+import App from "./src/App";
 
-// App.mount();
+App.mount();
