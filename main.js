@@ -1,3 +1,5 @@
-import App from "./src/App";
+// import App from "./src/App";
 
-App.mount();
+// App.mount();
+
+import "./styles/cluster.scss";
