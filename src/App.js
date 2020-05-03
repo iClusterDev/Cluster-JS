@@ -12,8 +12,7 @@ export default class App extends Component {
     return html`
       <c-filler class="secondary">
         <c-container class="primary" fill-height>
-          <h2>some content with a <a href="#" class="link">link</a></h2>
-          <p>Some content</p>
+          <span class="icon-activity"></span>
         </c-container>
       </c-filler>
     `;
