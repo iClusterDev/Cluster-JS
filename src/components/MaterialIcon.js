@@ -1,4 +1,4 @@
-import { Component } from "../core/Component";
+import { Component, html } from "../core/Component";
 
 class MaterialIcon extends Component {
   static get properties() {
@@ -12,9 +12,9 @@ class MaterialIcon extends Component {
   }
 
   render() {
-    return this.html`
-      <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-      <i class='material-icons'>${this.name}</i>
+    return html`
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <i class="material-icons">${this.name}</i>
     `;
   }
 }

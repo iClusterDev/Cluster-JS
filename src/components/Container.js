@@ -1,4 +1,4 @@
-import { Component } from "../core/Component";
+import { Component, html, classMap } from "../core/Component";
 import container from "../modules/container";
 
 class Container extends Component {
@@ -11,8 +11,10 @@ class Container extends Component {
   }
 
   render() {
-    return this.html`
-      <div class="container ${this.classes({ ...container.classes.call(this) })}"><slot></slot></div>
+    return html`
+      <div class="container ${classMap({ ...this.classes, ...container.classes.call(this) })}">
+        <slot></slot>
+      </div>
     `;
   }
 }

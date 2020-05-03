@@ -1,4 +1,4 @@
-import { Component } from "../core/Component";
+import { Component, html, classMap } from "../core/Component";
 import filler from "../modules/filler";
 
 class Filler extends Component {
@@ -7,8 +7,10 @@ class Filler extends Component {
   }
 
   render() {
-    return this.html`
-      <div class="filler ${this.classes()}"><slot></slot></div>
+    return html`
+      <div class="filler ${classMap({ ...this.classes })}">
+        <slot></slot>
+      </div>
     `;
   }
 }

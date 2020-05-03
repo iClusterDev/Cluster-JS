@@ -6,20 +6,12 @@ import cluster from "../../styles/cluster.scss";
 class Component extends LitElement {
   constructor() {
     super();
-    this.html = html;
-    this.classes = function (classInfo = {}) {
-      return classMap({
-        ...classInfo,
-        ...Array.from(this.classList).reduce((classMap, className) => {
-          classMap[className] = true;
-          return classMap;
-        }, {}),
-      });
+    this.classes = {
+      ...Array.from(this.classList).reduce((classMap, className) => {
+        classMap[className] = true;
+        return classMap;
+      }, {}),
     };
-  }
-
-  static get css() {
-    return css;
   }
 
   static get styles() {
