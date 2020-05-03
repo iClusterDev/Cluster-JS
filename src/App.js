@@ -1,4 +1,4 @@
-import Component from "./core/Component";
+import { Component } from "./core/Component";
 import Container from "./components/Container";
 import Filler from "./components/Filler";
 import MaterialIcon from "./components/MaterialIcon";
@@ -12,7 +12,8 @@ export default class App extends Component {
     return this.html`
       <c-filler>
         <c-container>
-          <h2>some content with a <a href="#" class="nav-link underline active">link</a></h2>
+          <h2>some content with a <a href="#" class="link">link</a></h2>
+          <p>Some content</p>
         </c-container>
       </c-filler>
     `;

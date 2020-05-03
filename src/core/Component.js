@@ -1,17 +1,11 @@
 import { LitElement, html, css } from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
+import { toKebab } from "../utils/functions";
 import cluster from "../../styles/cluster.scss";
-
-// FIXME
-// move this into utils?
-const kebab = (string) => {
-  return "c" + string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
-};
 
 class Component extends LitElement {
   constructor() {
     super();
-    this.css = css;
     this.html = html;
     this.classes = function (classInfo = {}) {
       return classMap({
@@ -24,6 +18,10 @@ class Component extends LitElement {
     };
   }
 
+  static get css() {
+    return css;
+  }
+
   static get styles() {
     return [cluster];
   }
@@ -33,7 +31,7 @@ class Component extends LitElement {
   }
 
   static mount() {
-    customElements.define(kebab(this.name), this);
+    customElements.define(toKebab(this.name), this);
     if (this.components && this.components.length > 0) {
       for (const component of this.components) {
         component.mount();
@@ -42,4 +40,4 @@ class Component extends LitElement {
   }
 }
 
-export default Component;
+export { Component, html, css, classMap };

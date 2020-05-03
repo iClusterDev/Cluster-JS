@@ -1,4 +1,4 @@
-import Component from "../core/Component";
+import { Component } from "../core/Component";
 import container from "../modules/container";
 
 class Container extends Component {

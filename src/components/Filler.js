@@ -1,4 +1,4 @@
-import Component from "../core/Component";
+import { Component } from "../core/Component";
 import filler from "../modules/filler";
 
 class Filler extends Component {
