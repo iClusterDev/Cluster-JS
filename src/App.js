@@ -13,7 +13,7 @@ export default class App extends Component {
     return html`
       <c-filler>
         <c-container fill-height>
-          <c-button fab raised>
+          <c-button fab>
             <c-icon name="add"></c-icon>
           </c-button>
         </c-container>
