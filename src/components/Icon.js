@@ -1,6 +1,18 @@
-import { Component, html } from "../core/Component";
+import { Component, html, css } from "../core/Component";
 
 class Icon extends Component {
+  static get styles() {
+    return [
+      super.styles,
+      css`
+        :host {
+          width: 24px;
+          height: 24px;
+        }
+      `,
+    ];
+  }
+
   static get properties() {
     return {
       name: {

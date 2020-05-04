@@ -2,27 +2,24 @@
 component: buttom
 classes: 
   .btn
-  → .btn-outlined
-  → .btn-text
-  → .btn-disabled
-  → .btn-large
-  → .btn-small
-  → .btn-squared
-  → .btn-rounded
-  → .btn-block
-  → .btn-raised
+  → .outlined
+  → .text
+  → .disabled
+  → .large
+  → .small
+  → .squared
+  → .rounded
+  → .block
+  → .raised
 */
 
 @use '../core/variables';
 
-// FIXME
-// double check on materialize the tap thing
 .btn,
 a.btn,
 button.btn,
 input[type="submit"].btn,
 input[type="button"].btn {
-  // shared variables
   $-btn-color: lighten(variables.$btn__background, 100) !default;
   $-btn-padding: 1.5rem !default;
   $-btn-min-width: 6rem !default;
@@ -32,7 +29,6 @@ input[type="button"].btn {
   $-btn-fab-size: 3.25rem !default;
   $-btn-fab-size-small: 2.25rem !default;
 
-  // reset
   font: inherit;
   cursor: pointer;
   outline: none;
@@ -42,11 +38,10 @@ input[type="button"].btn {
   justify-content: center;
   text-decoration: none;
 
-  // default buttons
   min-height: $-btn-min-height;
   min-width: $-btn-min-width;
   padding: 0 $-btn-padding;
-  margin: 0; // the margin should be defined in a better way?
+  margin: 0;
   color: $-btn-color !important;
   border: solid 1px transparent;
   font-size: variables.$btn__font-size;
@@ -63,15 +58,14 @@ input[type="button"].btn {
       background-color: lighten(variables.$btn__background, 20);
     }
   }
-  &.btn-disabled {
+  &.disabled {
     opacity: 40%;
     box-shadow: none !important;
     background-color: variables.$btn__background !important;
     cursor: default;
   }
 
-  // raised buttons
-  &.btn-raised {
+  &.raised {
     $-btn-raised-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.72) !default;
     &:hover {
       box-shadow: $-btn-raised-shadow;
@@ -81,8 +75,7 @@ input[type="button"].btn {
     }
   }
 
-  // outlined buttons
-  &.btn-outlined {
+  &.outlined {
     box-shadow: none;
     color: variables.$btn__background !important;
     border-color: variables.$btn__background;
@@ -93,13 +86,12 @@ input[type="button"].btn {
         background-color: $-btn-outlined-active;
       }
     }
-    &.btn-disabled {
+    &.disabled {
       background-color: transparent !important;
     }
   }
 
-  // text buttons
-  &.btn-text {
+  &.text {
     box-shadow: none;
     color: variables.$btn__background !important;
     border-color: transparent;
@@ -110,41 +102,35 @@ input[type="button"].btn {
         background-color: $-btn-outlined-active;
       }
     }
-    &.btn-disabled {
+    &.disabled {
       background-color: transparent !important;
     }
   }
 
-  // large buttons
-  &.btn-large {
+  &.large {
     padding: 0 calc(#{$-btn-padding} * 2);
     min-height: calc(#{$-btn-min-height} * 1.25);
   }
 
-  // small buttons
-  &.btn-small {
+  &.small {
     padding: 0 calc(#{$-btn-padding} / 2);
     min-height: calc(#{$-btn-min-height} / 1.25);
     font-size: 0.8rem;
   }
 
-  // rounded buttons
-  &.btn-rounded {
+  &.rounded {
     border-radius: $-btn-min-width;
   }
 
-  // squared buttons
-  &.btn-squared {
+  &.squared {
     border-radius: 0;
   }
 
-  // block buttons
-  &.btn-block {
+  &.block {
     width: 100%;
   }
 
-  // fab buttons
-  &.btn-fab {
+  &.fab {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +142,7 @@ input[type="button"].btn {
     min-height: $-btn-fab-size;
     border-radius: 100%;
 
-    &.btn-small {
+    &.small {
       width: $-btn-fab-size-small;
       height: $-btn-fab-size-small;
       min-width: $-btn-fab-size-small;
