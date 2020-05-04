@@ -1,18 +1,18 @@
 import { Component, html } from "./core/Component";
 import Container from "./components/Container";
 import Filler from "./components/Filler";
-import MaterialIcon from "./components/MaterialIcon";
+import Icon from "./components/Icon";
 
 export default class App extends Component {
   static get components() {
-    return [Filler, Container, MaterialIcon];
+    return [Filler, Container, Icon];
   }
 
   render() {
     return html`
       <c-filler class="secondary">
         <c-container class="primary" fill-height>
-          <span class="icon-activity"></span>
+          <c-icon class="text-white" name="home"></c-icon>
         </c-container>
       </c-filler>
     `;

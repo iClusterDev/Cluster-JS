@@ -1,6 +1,6 @@
 import { Component, html } from "../core/Component";
 
-class MaterialIcon extends Component {
+class Icon extends Component {
   static get properties() {
     return {
       name: {
@@ -19,4 +19,4 @@ class MaterialIcon extends Component {
   }
 }
 
-export default MaterialIcon;
+export default Icon;
