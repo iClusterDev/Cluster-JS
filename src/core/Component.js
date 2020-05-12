@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
 import { toKebab } from "../utils/functions";
+import { isRegistered } from "../utils/functions";
 import cluster from "../../styles/cluster.scss";
 
 class Component extends LitElement {
@@ -26,7 +27,9 @@ class Component extends LitElement {
     customElements.define(toKebab(this.name), this);
     if (this.components && this.components.length > 0) {
       for (const component of this.components) {
-        component.mount();
+        if (!isRegistered(toKebab(component.name))) {
+          component.mount();
+        }
       }
     }
   }

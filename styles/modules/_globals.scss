@@ -7,6 +7,8 @@ dependencies: ./core/normailze
 @import "../../node_modules/normalize-scss/sass/normalize";
 
 html {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
